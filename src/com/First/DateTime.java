@@ -2,7 +2,9 @@ package com.First;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.MonthDay;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoField;
 
 public class DateTime {
     public static void main(String []args){
@@ -60,5 +62,24 @@ public class DateTime {
         DateTimeFormatter formatPattern = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String formatDateTime = dateTime1.format(formatPattern);
         System.out.println("Local date time after formatting : " + formatDateTime);
+
+        System.out.println("==========EXAMPLE 6===========");
+
+        // Example 6 Get particular day of year, minute of day etc
+
+        LocalDateTime dateTime2 = LocalDateTime.of(2022,8,18,1,55);
+        System.out.println("Day of week: " + dateTime2.get(ChronoField.DAY_OF_WEEK));
+        System.out.println("Day of year: " + dateTime2.get(ChronoField.DAY_OF_YEAR));
+        System.out.println("Day of month: " + dateTime2.get(ChronoField.DAY_OF_MONTH));
+        System.out.println("Hour of day: " + dateTime2.get(ChronoField.HOUR_OF_DAY));
+        System.out.println("Minute of hour: " + dateTime2.get(ChronoField.MINUTE_OF_HOUR));
+
+        System.out.println("==========EXAMPLE 7===========");
+
+        // Example 7 Month
+        MonthDay month = MonthDay.now();
+        System.out.println("Curr month is " + month);
+        LocalDate date1 = month.atYear(2020);  // Add year
+        System.out.println(date1);
     }
 }
