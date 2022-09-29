@@ -14,7 +14,7 @@ public class DateTime {
         System.out.println("Yesterday was " + yesterday);
         System.out.println("Tomorrow will be " + tomorrow);
 
-        System.out.println("=====================");
+        System.out.println("==========EXAMPLE 2===========");
 
         // EXAMPLE 2   Is Leap Year
         if (date.isLeapYear()){
@@ -32,7 +32,7 @@ public class DateTime {
             System.out.println(date2 + " Is Not A Leap Year");
         }
 
-        System.out.println("=====================");
+        System.out.println("==========EXAMPLE 3===========");
 
         // EXAMPLE 3   Local Time
         LocalTime time = LocalTime.now();
@@ -44,17 +44,17 @@ public class DateTime {
         * */
 
 
-        System.out.println("=====================");
+        System.out.println("==========EXAMPLE 4===========");
 
         // EXAMPLE 4     Date & time together
-        LocalDateTime dateTime = date.atTime(time);
+        LocalDateTime dateTime = date.atTime(time);    // Combining diff date with diff time
         System.out.println("Date Time is " + dateTime);
 
-        System.out.println("=====================");
+        System.out.println("==========EXAMPLE 5===========");
 
         // EXAMPLE 5   Formatting date and time
 
-        LocalDateTime dateTime1 = LocalDateTime.now();
+        LocalDateTime dateTime1 = LocalDateTime.now();  // Current date with curr time
         System.out.println("Local date time before formatting : " + dateTime1);
 
         DateTimeFormatter formatPattern = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
