@@ -1,8 +1,5 @@
 package com.First;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.MonthDay;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 
@@ -81,5 +78,14 @@ public class DateTime {
         System.out.println("Curr month is " + month);
         LocalDate date1 = month.atYear(2020);  // Add year
         System.out.println(date1);
+
+        System.out.println("==========EXAMPLE 8===========");
+
+        // Example 8 Clock
+        Clock c = Clock.systemDefaultZone();
+        System.out.println(c.getZone());
+
+        Clock c2 = Clock.systemUTC();
+        System.out.println(c2.instant());
     }
 }
